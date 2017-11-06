@@ -44,7 +44,7 @@ class GenerateDemProcessing(Process):
             identifier = lit_input.identifier
             input_data_dict[identifier] = request.inputs[identifier][0].data
 
-        from pywps.processing.celery_request import format_body_request
+        from ogcservice.celery_request import format_body_request
         request_body = format_body_request(
             dockerim_name=self.dockerim_name,
             dockerim_version=self.dockerim_version,
