@@ -1,0 +1,3 @@
+[run]
+source = ogcpywps
+omit = ogcpywps/test*
