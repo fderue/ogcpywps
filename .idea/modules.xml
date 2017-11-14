@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/ogcpywps.iml" filepath="$PROJECT_DIR$/.idea/ogcpywps.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../ogcservice/.idea/ogcservice.iml" filepath="$PROJECT_DIR$/../../ogcservice/.idea/ogcservice.iml" />
       <module fileurl="file://$USER_HOME$/Programmation/birdhouse/pywps/.idea/pywps.iml" filepath="$USER_HOME$/Programmation/birdhouse/pywps/.idea/pywps.iml" />
     </modules>
   </component>

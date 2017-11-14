@@ -9,18 +9,21 @@ RUN apt-get update -y && \
 # We copy this file first to leverage docker cache
 
 WORKDIR /
+
+# Install OgcService
+RUN git clone https://github.com/fderue/ogcservice.git
+RUN pip install ./ogcservice
+
+# Install pywps and ogcpywps
+COPY . /ogcpywps
+
 # Install pywps
 RUN git clone -b ogc-TIE6 https://github.com/crim-ca/pywps.git
 
 RUN pip install -r /pywps/requirements.txt
 RUN pip install /pywps
 
-# Install OgcService
-RUN git clone https://github.com/fderue/ogcservice.git
-RUN pip install ./ogcservice
 
-# Install ogcpywps
-COPY . /ogcpywps
 RUN pip install -e /ogcpywps 
 RUN mkdir -p /var/ogc/pywps /var/ogc/pywps/outputs /var/ogc/pywps/tmp
 
