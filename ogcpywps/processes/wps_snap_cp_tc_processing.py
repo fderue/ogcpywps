@@ -15,6 +15,7 @@ class SnapCpTcProcessing(Process):
             LiteralInput('rsat2_product_xml_path', 'rsat2_product_xml_path', data_type='string'),
             LiteralInput('output_directory', 'output_directory', data_type='string'),
             LiteralInput('input_dem_path', 'input_dem_path', data_type='string'),
+            LiteralInput('WMS_server', 'URI where to register a WMS-compatible output', data_type='string'),
             LiteralInput('queue_name', 'Name of celery queue to send the request', data_type='string'),
         ]
         outputs = [

@@ -10,12 +10,11 @@ RUN apt-get update -y && \
 
 WORKDIR /
 
+COPY . /ogcpywps
+
 # Install OgcService
 RUN git clone https://github.com/fderue/ogcservice.git
 RUN pip install ./ogcservice
-
-# Install pywps and ogcpywps
-COPY . /ogcpywps
 
 # Install pywps
 RUN git clone -b ogc-TIE6 https://github.com/crim-ca/pywps.git

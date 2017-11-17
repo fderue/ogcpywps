@@ -14,6 +14,7 @@ class SnapGeneralProcessing(Process):
         inputs = [
             LiteralInput('input_snap_graph_path', 'Chemin du fichier xml du graphe', data_type='string'),
             LiteralInput('output_directory', 'Chemin de sortie du graphe edite', data_type='string'),
+            LiteralInput('WMS_server', 'URI where to register a WMS-compatible output', data_type='string'),
             LiteralInput('Read.file', 'Chemin de l image d entree pour le noeud Read', data_type='string'),
             LiteralInput('Write.file', 'Chemin de sortie de l image filtree pour le noeud Write', data_type='string'),
             LiteralInput('Write.formatName', 'Format de sortie', data_type='string'),
