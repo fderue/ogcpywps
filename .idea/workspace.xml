@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc95fe60-8454-46cc-91db-5b0d691f3ee1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../ogcservice/ogcservice/celery_joblauncher.py" afterPath="$PROJECT_DIR$/../../ogcservice/ogcservice/celery_joblauncher.py" />
+      <change type="MODIFICATION" beforePath="$USER_HOME$/Programmation/birdhouse/pywps/pywps/app/Process.py" afterPath="$USER_HOME$/Programmation/birdhouse/pywps/pywps/app/Process.py" />
+      <change type="MODIFICATION" beforePath="$USER_HOME$/Programmation/birdhouse/pywps/pywps/configuration.py" afterPath="$USER_HOME$/Programmation/birdhouse/pywps/pywps/configuration.py" />
+      <change type="MODIFICATION" beforePath="$USER_HOME$/Programmation/birdhouse/pywps/pywps/processing/celery_utils.py" afterPath="$USER_HOME$/Programmation/birdhouse/pywps/pywps/processing/celery_utils.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,14 +15,14 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.8271919">
+    <splitter split-orientation="horizontal" split-proportion="0.51524776">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="celery_utils.py" pinned="false" current-in-tab="false">
+          <file leaf-file-name="celery_utils.py" pinned="false" current-in-tab="true">
             <entry file="file://$USER_HOME$/Programmation/birdhouse/pywps/pywps/processing/celery_utils.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="143">
-                  <caret line="244" column="32" lean-forward="false" selection-start-line="244" selection-start-column="32" selection-end-line="244" selection-end-column="32" />
+                <state relative-caret-position="188">
+                  <caret line="255" column="8" lean-forward="true" selection-start-line="255" selection-start-column="8" selection-end-line="255" selection-end-column="8" />
                   <folding>
                     <element signature="e#0#14#0" expanded="true" />
                   </folding>
@@ -28,12 +30,34 @@
               </provider>
             </entry>
           </file>
+          <file leaf-file-name="job.py" pinned="false" current-in-tab="false">
+            <entry file="file://$USER_HOME$/Programmation/birdhouse/pywps/pywps/processing/job.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
           <file leaf-file-name="Process.py" pinned="false" current-in-tab="false">
             <entry file="file://$USER_HOME$/Programmation/birdhouse/pywps/pywps/app/Process.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-1446">
-                  <caret line="149" column="4" lean-forward="false" selection-start-line="149" selection-start-column="4" selection-end-line="149" selection-end-column="4" />
+                <state relative-caret-position="288">
+                  <caret line="176" column="67" lean-forward="true" selection-start-line="176" selection-start-column="67" selection-end-line="176" selection-end-column="67" />
                   <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="configuration.py" pinned="false" current-in-tab="false">
+            <entry file="file://$USER_HOME$/Programmation/birdhouse/pywps/pywps/configuration.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="378">
+                  <caret line="95" column="52" lean-forward="true" selection-start-line="95" selection-start-column="52" selection-end-line="95" selection-end-column="52" />
+                  <folding>
+                    <element signature="e#380#394#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -41,41 +65,21 @@
           <file leaf-file-name="ogcpywps.conf" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/ogcpywps.conf">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="128">
-                  <caret line="61" column="33" lean-forward="true" selection-start-line="61" selection-start-column="33" selection-end-line="61" selection-end-column="33" />
+                <state relative-caret-position="163">
+                  <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="celery_joblauncher.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="celery_joblauncher.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/../../ogcservice/ogcservice/celery_joblauncher.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="607">
-                  <caret line="77" column="34" lean-forward="false" selection-start-line="77" selection-start-column="34" selection-end-line="77" selection-end-column="34" />
+                <state relative-caret-position="760">
+                  <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
                   <folding>
                     <element signature="e#0#25#0" expanded="true" />
                   </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="wps_generate_dem_processing.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/ogcpywps/processes/wps_generate_dem_processing.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="241">
-                  <caret line="24" column="26" lean-forward="true" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="wps_snap_cp_tc_processing.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/ogcpywps/processes/wps_snap_cp_tc_processing.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                  <folding />
                 </state>
               </provider>
             </entry>
@@ -84,7 +88,7 @@
             <entry file="file://$PROJECT_DIR$/ogcpywps/processes/wps_snap_general_processing.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="102">
-                  <caret line="34" column="84" lean-forward="true" selection-start-line="34" selection-start-column="84" selection-end-line="34" selection-end-column="84" />
+                  <caret line="34" column="84" lean-forward="false" selection-start-line="34" selection-start-column="84" selection-end-line="34" selection-end-column="84" />
                   <folding />
                 </state>
               </provider>
@@ -93,8 +97,8 @@
           <file leaf-file-name="ogcpywps.cfg" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/ogcpywps.cfg">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="240">
-                  <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+                <state relative-caret-position="300">
+                  <caret line="24" column="8" lean-forward="true" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
                   <folding />
                 </state>
               </provider>
@@ -119,28 +123,28 @@
           <file leaf-file-name="scheduler.py" pinned="false" current-in-tab="false">
             <entry file="file://$USER_HOME$/Programmation/birdhouse/pywps/pywps/processing/scheduler.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="468">
+                <state relative-caret-position="177">
                   <caret line="85" column="0" lean-forward="false" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="celery_request.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="celery_request.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/../../ogcservice/ogcservice/celery_request.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="289">
-                  <caret line="52" column="25" lean-forward="false" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
+                  <caret line="52" column="23" lean-forward="true" selection-start-line="52" selection-start-column="23" selection-end-line="52" selection-end-column="23" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Service.py" pinned="false" current-in-tab="false">
+          <file leaf-file-name="Service.py" pinned="false" current-in-tab="true">
             <entry file="file://$USER_HOME$/Programmation/birdhouse/pywps/pywps/app/Service.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="114">
-                  <caret line="654" column="28" lean-forward="false" selection-start-line="654" selection-start-column="20" selection-end-line="654" selection-end-column="28" />
+                <state relative-caret-position="223">
+                  <caret line="628" column="60" lean-forward="false" selection-start-line="628" selection-start-column="60" selection-end-line="628" selection-end-column="60" />
                   <folding>
                     <element signature="e#337#351#0" expanded="true" />
                   </folding>
@@ -191,8 +195,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>&gt;</find>
-      <find>&gt;ser</find>
       <find>&gt;serv</find>
       <find>i</find>
       <find>import</find>
@@ -221,6 +223,8 @@
       <find>get_st</find>
       <find>get_Statu</find>
       <find>set_u</find>
+      <find>get_stast</find>
+      <find>_set</find>
     </findStrings>
     <dirStrings>
       <dir>$USER_HOME$/Programmation/birdhouse/pywps</dir>
@@ -228,7 +232,7 @@
   </component>
   <component name="Git.Settings">
     <option name="ROOT_SYNC" value="DONT_SYNC" />
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../ogcservice" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$USER_HOME$/Programmation/birdhouse/pywps" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -246,13 +250,14 @@
         <option value="$USER_HOME$/Programmation/birdhouse/pywps/pywps/processing/scheduler.py" />
         <option value="$USER_HOME$/Programmation/birdhouse/pywps/pywps/app/WPSResponse.py" />
         <option value="$USER_HOME$/Programmation/birdhouse/pywps/pywps/app/Service.py" />
-        <option value="$USER_HOME$/Programmation/birdhouse/pywps/pywps/app/Process.py" />
-        <option value="$USER_HOME$/Programmation/birdhouse/pywps/pywps/processing/celery_utils.py" />
-        <option value="$PROJECT_DIR$/ogcpywps.cfg" />
         <option value="$PROJECT_DIR$/ogcpywps.conf" />
         <option value="$PROJECT_DIR$/ogcpywps/processes/wps_snap_cp_tc_processing.py" />
         <option value="$PROJECT_DIR$/ogcpywps/processes/wps_snap_general_processing.py" />
         <option value="$PROJECT_DIR$/../../ogcservice/ogcservice/celery_joblauncher.py" />
+        <option value="$USER_HOME$/Programmation/birdhouse/pywps/pywps/app/Process.py" />
+        <option value="$USER_HOME$/Programmation/birdhouse/pywps/pywps/configuration.py" />
+        <option value="$PROJECT_DIR$/ogcpywps.cfg" />
+        <option value="$USER_HOME$/Programmation/birdhouse/pywps/pywps/processing/celery_utils.py" />
       </list>
     </option>
   </component>
@@ -299,6 +304,76 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="pywps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ogcpywps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pywps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pywps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ogcpywps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pywps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pywps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="processing" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ogcpywps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pywps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pywps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ogcpywps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ogcservice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ogcpywps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ogcpywps" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -391,9 +466,11 @@
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
         <env name="VRP_CONFIGURATION" value="/home/deruefx/CrimProjects/ogc/OGC-TIEs/TIE-6/config/ogc_config.py" />
+        <env name="OUTPUT_URL" value="http://localhost:8097/wpsoutputs" />
+        <env name="PYTHONUNBUFFERED" value="1" />
         <env name="AMQP_PASSWORD" value="asdf" />
+        <env name="HOST_URL" value="http://localhost:8095/wps" />
         <env name="PYWPS_CFG" value="/home/deruefx/CrimProjects/ogc/ogcpywps/ogcpywps/ogcpywps.cfg" />
         <env name="AMQP_USERNAME" value="test" />
         <env name="AQMP_PORT" value="5672" />
@@ -435,7 +512,7 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12990603" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16790353" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39703155" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2498618" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -502,8 +579,13 @@
           <line>654</line>
           <option name="timeStamp" value="26" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/Programmation/birdhouse/pywps/pywps/processing/scheduler.py</url>
+          <line>84</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="27" />
+      <option name="time" value="28" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -607,13 +689,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Programmation/birdhouse/pywps/pywps/processing/job.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -724,16 +799,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Programmation/birdhouse/pywps/pywps/configuration.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="27" column="35" lean-forward="false" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
-          <folding>
-            <element signature="e#380#394#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Programmation/birdhouse/pywps/pywps/dblog.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
@@ -760,24 +825,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Programmation/birdhouse/pywps/pywps/processing/celery_utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="244" column="32" lean-forward="false" selection-start-line="244" selection-start-column="32" selection-end-line="244" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Programmation/birdhouse/pywps/pywps/processing/scheduler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="85" column="0" lean-forward="false" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/env/local/lib/python2.7/site-packages/werkzeug/wrappers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="183">
@@ -794,40 +841,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Programmation/birdhouse/pywps/pywps/app/Service.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="654" column="28" lean-forward="false" selection-start-line="654" selection-start-column="20" selection-end-line="654" selection-end-column="28" />
-          <folding>
-            <element signature="e#337#351#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Programmation/birdhouse/pywps/pywps/app/Process.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1446">
-          <caret line="149" column="4" lean-forward="false" selection-start-line="149" selection-start-column="4" selection-end-line="149" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ogcpywps.cfg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ogcpywps.conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="61" column="33" lean-forward="true" selection-start-line="61" selection-start-column="33" selection-end-line="61" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/env/local/lib/python2.7/site-packages/gunicorn/workers/sync.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-687">
@@ -836,10 +849,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ogcpywps/processes/wps_generate_dem_processing.py">
+    <entry file="file://$PROJECT_DIR$/../../ogcservice/ogcservice/celery_request.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="24" column="26" lean-forward="true" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
+        <state relative-caret-position="289">
+          <caret line="52" column="23" lean-forward="true" selection-start-line="52" selection-start-column="23" selection-end-line="52" selection-end-column="23" />
           <folding />
         </state>
       </provider>
@@ -847,15 +860,23 @@
     <entry file="file://$PROJECT_DIR$/ogcpywps/processes/wps_snap_cp_tc_processing.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../ogcservice/ogcservice/celery_request.py">
+    <entry file="file://$PROJECT_DIR$/ogcpywps/processes/wps_generate_dem_processing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="52" column="25" lean-forward="false" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
+        <state relative-caret-position="121">
+          <caret line="18" column="67" lean-forward="true" selection-start-line="18" selection-start-column="67" selection-end-line="18" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ogcpywps.cfg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="24" column="8" lean-forward="true" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
           <folding />
         </state>
       </provider>
@@ -863,17 +884,79 @@
     <entry file="file://$PROJECT_DIR$/ogcpywps/processes/wps_snap_general_processing.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
-          <caret line="34" column="84" lean-forward="true" selection-start-line="34" selection-start-column="84" selection-end-line="34" selection-end-column="84" />
+          <caret line="34" column="84" lean-forward="false" selection-start-line="34" selection-start-column="84" selection-end-line="34" selection-end-column="84" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../ogcservice/ogcservice/celery_joblauncher.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="607">
-          <caret line="77" column="34" lean-forward="false" selection-start-line="77" selection-start-column="34" selection-end-line="77" selection-end-column="34" />
+        <state relative-caret-position="760">
+          <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ogcpywps.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Programmation/birdhouse/pywps/pywps/configuration.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="95" column="52" lean-forward="true" selection-start-line="95" selection-start-column="52" selection-end-line="95" selection-end-column="52" />
+          <folding>
+            <element signature="e#380#394#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Programmation/birdhouse/pywps/pywps/app/Process.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="176" column="67" lean-forward="true" selection-start-line="176" selection-start-column="67" selection-end-line="176" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Programmation/birdhouse/pywps/pywps/processing/scheduler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="85" column="0" lean-forward="false" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Programmation/birdhouse/pywps/pywps/processing/job.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Programmation/birdhouse/pywps/pywps/app/Service.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="628" column="60" lean-forward="false" selection-start-line="628" selection-start-column="60" selection-end-line="628" selection-end-column="60" />
+          <folding>
+            <element signature="e#337#351#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Programmation/birdhouse/pywps/pywps/processing/celery_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="255" column="8" lean-forward="true" selection-start-line="255" selection-start-column="8" selection-end-line="255" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
           </folding>
         </state>
       </provider>
