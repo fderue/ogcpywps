@@ -1,6 +1,7 @@
 from pywps import Process, LiteralInput, LiteralOutput, OGCUNIT, UOM
 import json
 import logging
+from wps_get_cloud_params import GetCloudParams
 LOGGER = logging.getLogger("PYWPS")
 
 
@@ -15,8 +16,8 @@ class SnapGeneralProcessing(Process):
             LiteralInput('IaaS_deploy_execute',
                          title='URI of the IaaS resource where the job will be deployed and executed ()',
                          abstract='If the WPS Server contains a Task Queue scheduler, the URI contains two part. The first part is the URI of the Message Broker in the form of amqp://broker_ip:broker_port//. The second part is the Task Queue name. For simplicity, both part are appended in a single string. This input parameter does not support credentials. Credentials for Message brokers are set as a system configuration. The credentials are injected in the environment variables of the VM instance that will host the WPS Server',
-                         default=json.dumps(
-                             {"BROKER_HOST": "localhost", "BROKER_PORT": 5672, "QUEUE_NAME": "celery_tiny"}),
+                         allowed_values=[json.dumps(broker_queue) for broker_queue in GetCloudParams.broker_queue_list],
+                         default=json.dumps(GetCloudParams.broker_queue_list[0]),
                          data_type='string'),
             LiteralInput('IaaS_datastore',
                          title='URI of an IaaS data store where the outputs will stored',

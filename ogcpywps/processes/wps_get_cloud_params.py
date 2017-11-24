@@ -17,6 +17,7 @@ class GetCloudParams(Process):
     BROKER_HOST = config_module_dict['BROKER_HOST']
     BROKER_PORT = config_module_dict['BROKER_PORT']
     celery_queue_names = [ws['celery_queue_name'] for ws in config_module_dict['WORKER_SERVICES'].values()]
+    broker_queue_list = [format_broker_queue(BROKER_HOST, BROKER_PORT, queue_name) for queue_name in celery_queue_names]
 
     def __init__(self):
         inputs = [
@@ -40,8 +41,7 @@ class GetCloudParams(Process):
     def _handler(self, request, response):
         LOGGER.info("run get cloud params")
 
-        broker_queue_list = [format_broker_queue(self.BROKER_HOST, self.BROKER_PORT, queue_name) for queue_name in self.celery_queue_names]
-        response.outputs['IaaS_deploy_execute'].data = json.dumps(broker_queue_list)
+        response.outputs['IaaS_deploy_execute'].data = json.dumps(self.broker_queue_list)
 
         return response
 
