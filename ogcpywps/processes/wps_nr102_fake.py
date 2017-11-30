@@ -17,7 +17,7 @@ class Nr102Fake(Process):
             LiteralInput('IaaS_deploy_execute',
                          title='URI of the IaaS resource where the job will be deployed and executed ()',
                          abstract='If the WPS Server contains a Task Queue scheduler, the URI contains two part. The first part is the URI of the Message Broker in the form of amqp://broker_ip:broker_port//. The second part is the Task Queue name. For simplicity, both part are appended in a single string. This input parameter does not support credentials. Credentials for Message brokers are set as a system configuration. The credentials are injected in the environment variables of the VM instance that will host the WPS Server',
-                         allowed_values=[json.dumps(broker_queue) for broker_queue in GetCloudParams.broker_queue_list],
+                         #allowed_values=[json.dumps(broker_queue) for broker_queue in GetCloudParams.broker_queue_list],
                          default=json.dumps(GetCloudParams.broker_queue_list[0]),
                          data_type='string'),
             LiteralInput('IaaS_datastore',
@@ -56,7 +56,7 @@ class Nr102Fake(Process):
         super(Nr102Fake, self).__init__(
             self._handler,
             identifier='nr102fake',
-            abstract='This wps is an empty process to show the describe process documented on confluence',
+            abstract='This Web Processing Service (WPS) was developped as a deliverable for OGC Testbed 13 Earth Observation Cloud (EOC) Thread. It aims to meet Natural Resources Canada specifications for hybrid cloud architectures in forestry applications.',
             title='Cloud WPS Biomass with WCS/WMS support 2',
             version='0.1',
             inputs=inputs,

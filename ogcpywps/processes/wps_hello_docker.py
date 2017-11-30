@@ -16,7 +16,7 @@ class HelloDocker(Process):
             LiteralInput('IaaS_deploy_execute',
                          title='URI of the IaaS resource where the job will be deployed and executed ()',
                          abstract='If the WPS Server contains a Task Queue scheduler, the URI contains two part. The first part is the URI of the Message Broker in the form of amqp://broker_ip:broker_port//. The second part is the Task Queue name. For simplicity, both part are appended in a single string. This input parameter does not support credentials. Credentials for Message brokers are set as a system configuration. The credentials are injected in the environment variables of the VM instance that will host the WPS Server',
-                         allowed_values=[json.dumps(broker_queue) for broker_queue in GetCloudParams.broker_queue_list],
+                         #allowed_values=[json.dumps(broker_queue) for broker_queue in GetCloudParams.broker_queue_list],
                          default=json.dumps(GetCloudParams.broker_queue_list[0]),
                          data_type='string'),
             LiteralInput('IaaS_datastore',
@@ -32,8 +32,7 @@ class HelloDocker(Process):
         super(HelloDocker, self).__init__(
             self._handler,
             identifier='hellodocker',
-            abstract='This wps exposes every parameters to the client of a specific app, '
-                     'including the docker params (ows:context) and cloud params',
+            abstract='Simple WPS to test stage in and out by downloading a file and save it to a file server with a new name',
             title='Hello Docker',
             version='0.1',
             inputs=inputs,

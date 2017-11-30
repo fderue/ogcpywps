@@ -25,7 +25,7 @@ tests_require = [
 
 setup(
     name='ogcpywps',
-    version='0.0',
+    version='0.0.1',
     description='ogcpywps',
     long_description=README + '\n\n' + CHANGES,
     classifiers=[
