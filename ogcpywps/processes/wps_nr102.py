@@ -4,10 +4,7 @@ from wps_get_cloud_params import GetCloudParams
 import logging
 LOGGER = logging.getLogger("PYWPS")
 
-
-
-
-class Nr102Fake(Process):
+class Nr102(Process):
     def __init__(self):
         inputs = [
             LiteralInput('docker_image',
@@ -15,7 +12,7 @@ class Nr102Fake(Process):
                          abstract='The URI contains the full path to a Docker image as used by Docker Daemon, including the host, port, path, image name and version. This input parameter does not support credentials. Credentials for private Docker registries are set as a system configuration. The credentials are injected in the environment variables of the VM instance that runs the Docker Image',
                          data_type='string'),
             LiteralInput('IaaS_deploy_execute',
-                         title='URI of the IaaS resource where the job will be deployed and executed ()',
+                         title='Json of the IaaS resource where the job will be deployed and executed ()',
                          abstract='If the WPS Server contains a Task Queue scheduler, the URI contains two part. The first part is the URI of the Message Broker in the form of amqp://broker_ip:broker_port//. The second part is the Task Queue name. For simplicity, both part are appended in a single string. This input parameter does not support credentials. Credentials for Message brokers are set as a system configuration. The credentials are injected in the environment variables of the VM instance that will host the WPS Server',
                          #allowed_values=[json.dumps(broker_queue) for broker_queue in GetCloudParams.broker_queue_list],
                          default=json.dumps(GetCloudParams.broker_queue_list[0]),
@@ -53,9 +50,9 @@ class Nr102Fake(Process):
         ]
 
 
-        super(Nr102Fake, self).__init__(
+        super(Nr102, self).__init__(
             self._handler,
-            identifier='nr102fake',
+            identifier='nr102',
             abstract='This Web Processing Service (WPS) was developped as a deliverable for OGC Testbed 13 Earth Observation Cloud (EOC) Thread. It aims to meet Natural Resources Canada specifications for hybrid cloud architectures in forestry applications.',
             title='Cloud WPS Biomass with WCS/WMS support 2',
             version='0.1',
@@ -68,7 +65,7 @@ class Nr102Fake(Process):
     def _handler(self, request, response):
         LOGGER.info("run docker app")
 
-        dockerim_name = request.inputs['docker_image'][0].data
+        docker_image = request.inputs['docker_image'][0].data
 
         input_data={}
         for lit_input in self.inputs:
@@ -80,7 +77,7 @@ class Nr102Fake(Process):
         from ogcservice.celery_request import format_body_request
 
         request_body = format_body_request(
-            dockerim_name=dockerim_name,
+            docker_image=docker_image,
             input_data=input_data,
             param_as_envar=True,
             volume_mapping={})

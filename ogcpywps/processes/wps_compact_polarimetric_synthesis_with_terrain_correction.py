@@ -1,12 +1,10 @@
 from pywps import Process, LiteralInput, LiteralOutput
 import json
 from wps_get_cloud_params import GetCloudParams
-
 import logging
 LOGGER = logging.getLogger("PYWPS")
 
-
-class HelloDocker(Process):
+class CPSWTC(Process):
     def __init__(self):
         inputs = [
             LiteralInput('docker_image',
@@ -16,25 +14,40 @@ class HelloDocker(Process):
             LiteralInput('IaaS_deploy_execute',
                          title='Json of the IaaS resource where the job will be deployed and executed ()',
                          abstract='If the WPS Server contains a Task Queue scheduler, the URI contains two part. The first part is the URI of the Message Broker in the form of amqp://broker_ip:broker_port//. The second part is the Task Queue name. For simplicity, both part are appended in a single string. This input parameter does not support credentials. Credentials for Message brokers are set as a system configuration. The credentials are injected in the environment variables of the VM instance that will host the WPS Server',
-                         #allowed_values=[json.dumps(broker_queue) for broker_queue in GetCloudParams.broker_queue_list],
+                         allowed_values=[json.dumps(broker_queue) for broker_queue in GetCloudParams.broker_queue_list],
                          default=json.dumps(GetCloudParams.broker_queue_list[0]),
                          data_type='string'),
             LiteralInput('IaaS_datastore',
                          title='URI of an IaaS data store where the outputs will stored',
                          abstract='This parameter sets the target for all outputs of the process (HTTPS fileserver, AWS S3, SWIFT, Globus, etc.). Outputs will be staged out in the datastore by the process. The current implementation only supports HTTP fileservers. This input parameter does not support credentials. Credentials for datastores are set as a system configuration. The credentials are injected in the environment variables of the VM instance that runs the Docker Image',
                          data_type='string'),
-            LiteralInput('url_to_download', 'url of a file to download', data_type='string'),
-            LiteralInput('new_file_name', 'new name to give to the downloaded file', data_type='string'),
+            LiteralInput('PinputRSat2',
+                         title='URI from where to download the Radarsat-2 data ZIP',
+                         abstract='The Radarsat-2 file is unzipped in the local drive. The product.xml file is located then provided to RSTB/SNAP. The long string identifying the product is used to create temporary directories and to format the output file names',
+                         data_type='string'),
+            LiteralInput('PgeoserverUrl',
+                         title='URI where to register a WMS-compatible output',
+                         abstract='The process produces an RGB image of the data output. Its smaller footprint is better managed by WMS/WCS servers. The RGB output will be staged out in the specified WMS Server by the process. The output parameter named output_data_WMS_url will contain an URL pointing to this WMS server. The credentials are injected in the environment variables of the VM instance that runs the Docker Image.',
+                         data_type='string'),
         ]
         outputs = [
-            LiteralOutput('output', 'Path to output', data_type='string')]
+            LiteralOutput('output_data_url',
+                          title='URL to data produced by the process',
+                          abstract='The URL provided here is dependent on the IaaS_datastore selected. It allows an user to access and download from the Cloud the image data produced by the process. By default in the current implementation, the output data is accessible through HTTP fileservers.',
+                          data_type='string'),
+            LiteralOutput('output_data_WMS_url',
+                          title='URL to WMS layer for the data produced',
+                          abstract='The URL provided here is dependent on the WMS_server provided. If no WMS server was specified, this field is left blank. The URL allows an user to access the image data produced by the process in WMS client.',
+                          data_type='string'),
+        ]
 
-        super(HelloDocker, self).__init__(
+
+        super(CPSWTC, self).__init__(
             self._handler,
-            identifier='hellodocker',
-            abstract='Simple WPS to test stage in and out by downloading a file and save it to a file server with a new name',
-            title='Hello Docker',
-            version='0.1',
+            identifier='CPSWTC',
+            abstract='Production of compact polarymetry with automatic orthocorrection',
+            title='Compact polarimetric synthesis with terrain correction',
+            version='0.2',
             inputs=inputs,
             outputs=outputs,
             store_supported=True,
@@ -42,7 +55,7 @@ class HelloDocker(Process):
         )
 
     def _handler(self, request, response):
-        LOGGER.info("run docker app")
+        LOGGER.info("run CPSWTC")
 
         docker_image = request.inputs['docker_image'][0].data
 
@@ -50,7 +63,7 @@ class HelloDocker(Process):
         for lit_input in self.inputs:
             identifier = lit_input.identifier
             # Avoid cloud params (that should not be in expose to the client ideally)
-            if (identifier != 'IaaS_deploy_execute') and (identifier != 'IaaS_datastore'):
+            if identifier != 'IaaS_deploy_execute':
                 input_data[identifier] = request.inputs[identifier][0].data
 
         from ogcservice.celery_request import format_body_request
@@ -58,7 +71,7 @@ class HelloDocker(Process):
         request_body = format_body_request(
             docker_image=docker_image,
             input_data=input_data,
-            param_as_envar=True,
+            param_as_envar=False,
             volume_mapping={})
 
         # TODO check on cloud params

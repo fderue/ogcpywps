@@ -7,16 +7,16 @@ LOGGER = logging.getLogger("PYWPS")
 
 class SnapCpTcProcessing(Process):
 
-    dockerim_name = 'docker-registry.crim.ca/ogc/debian8-snap5-ogc-processingt'
+    docker_image = 'docker-registry.crim.ca/ogc/debian8-snap5-ogc-processingt'
     registry_url = 'docker-registry.crim.ca'
     dockerim_version = 'v1'
 
     def __init__(self):
         inputs = [
             LiteralInput('IaaS_deploy_execute',
-                         title='URI of the IaaS resource where the job will be deployed and executed ()',
+                         title='Json of the IaaS resource where the job will be deployed and executed ()',
                          abstract='If the WPS Server contains a Task Queue scheduler, the URI contains two part. The first part is the URI of the Message Broker in the form of amqp://broker_ip:broker_port//. The second part is the Task Queue name. For simplicity, both part are appended in a single string. This input parameter does not support credentials. Credentials for Message brokers are set as a system configuration. The credentials are injected in the environment variables of the VM instance that will host the WPS Server',
-                         #allowed_values=[json.dumps(broker_queue) for broker_queue in GetCloudParams.broker_queue_list],
+                         allowed_values=[json.dumps(broker_queue) for broker_queue in GetCloudParams.broker_queue_list],
                          default=json.dumps(GetCloudParams.broker_queue_list[0]),
                          data_type='string'),
             LiteralInput('IaaS_datastore',
@@ -56,7 +56,7 @@ class SnapCpTcProcessing(Process):
 
         from ogcservice.celery_request import format_body_request
         request_body = format_body_request(
-            dockerim_name=self.dockerim_name,
+            docker_image=self.docker_image,
             input_data=input_data,
             param_as_envar=True,
             volume_mapping={})
