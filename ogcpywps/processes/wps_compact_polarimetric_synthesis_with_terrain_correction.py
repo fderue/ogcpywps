@@ -70,17 +70,21 @@ class CPSWTC(Process):
         input_data['Poperation'] = 'Compact-Polarimetric-Synthesis-With-Terrain-Correction'
         from ogcservice.celery_request import format_body_request
 
-        request_body = format_body_request(
-            docker_image=docker_image,
-            input_data=input_data,
-            param_as_envar=False,
-            volume_mapping={})
+
 
         # TODO check on cloud params
         cloud_params = {
             'IaaS_deploy_execute': json.loads(request.inputs['IaaS_deploy_execute'][0].data),
             'IaaS_datastore': request.inputs['IaaS_datastore'][0].data
         }
+
+        request_body = format_body_request(
+            docker_image=docker_image,
+            input_data=input_data,
+            param_as_envar=False,
+            queue_name=cloud_params['IaaS_deploy_execute']['QUEUE_NAME'],
+            volume_mapping={})
+
         response = {'request_body': request_body,
                     'cloud_params': cloud_params}
 
