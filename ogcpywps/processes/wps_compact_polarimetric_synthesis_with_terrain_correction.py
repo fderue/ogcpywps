@@ -31,11 +31,11 @@ class CPSWTC(Process):
                          data_type='string'),
         ]
         outputs = [
-            LiteralOutput('output_data_url',
+            LiteralOutput('result_url',
                           title='URL to data produced by the process',
                           abstract='The URL provided here is dependent on the IaaS_datastore selected. It allows an user to access and download from the Cloud the image data produced by the process. By default in the current implementation, the output data is accessible through HTTP fileservers.',
                           data_type='string'),
-            LiteralOutput('output_data_WMS_url',
+            LiteralOutput('geoserver_wms',
                           title='URL to WMS layer for the data produced',
                           abstract='The URL provided here is dependent on the WMS_server provided. If no WMS server was specified, this field is left blank. The URL allows an user to access the image data produced by the process in WMS client.',
                           data_type='string'),
