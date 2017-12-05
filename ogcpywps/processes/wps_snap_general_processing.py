@@ -20,7 +20,7 @@ class SnapGeneralProcessing(Process):
                          default=json.dumps(GetCloudParams.broker_queue_list[0]),
                          data_type='string'),
             LiteralInput('IaaS_datastore',
-                         title='URI of an IaaS data store where the outputs will stored',
+                         title='URI of an IaaS data store where the outputs will be stored',
                          abstract='This parameter sets the target for all outputs of the process (HTTPS fileserver, AWS S3, SWIFT, Globus, etc.). Outputs will be staged out in the datastore by the process. The current implementation only supports HTTP fileservers. This input parameter does not support credentials. Credentials for datastores are set as a system configuration. The credentials are injected in the environment variables of the VM instance that runs the Docker Image',
                          data_type='string'),
             LiteralInput('input_snap_graph_path', 'Chemin du fichier xml du graphe', data_type='string'),

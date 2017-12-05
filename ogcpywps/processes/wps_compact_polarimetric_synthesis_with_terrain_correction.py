@@ -18,10 +18,10 @@ class CPSWTC(Process):
                          default=json.dumps(GetCloudParams.broker_queue_list[0]),
                          data_type='string'),
             LiteralInput('IaaS_datastore',
-                         title='URI of an IaaS data store where the outputs will stored',
+                         title='URI of an IaaS data store where the outputs will be stored',
                          abstract='This parameter sets the target for all outputs of the process (HTTPS fileserver, AWS S3, SWIFT, Globus, etc.)...',# Outputs will be staged out in the datastore by the process. The current implementation only supports HTTP fileservers. This input parameter does not support credentials. Credentials for datastores are set as a system configuration. The credentials are injected in the environment variables of the VM instance that runs the Docker Image',
                          data_type='string'),
-            LiteralInput('PinputRSat2',
+            LiteralInput('PinputRsat2',
                          title='URI from where to download the Radarsat-2 data ZIP',
                          abstract='The Radarsat-2 file is unzipped in the local drive. The product.xml file is located, ...',# then provided to RSTB/SNAP.',# The long string identifying the product is used to create temporary directories and to format the output file names',
                          data_type='string'),
@@ -66,6 +66,8 @@ class CPSWTC(Process):
             if identifier != 'IaaS_deploy_execute':
                 input_data[identifier] = request.inputs[identifier][0].data
 
+        # Specific to this wps process
+        input_data['Poperation'] = 'Compact-Polarimetric-Synthesis-With-Terrain-Correction'
         from ogcservice.celery_request import format_body_request
 
         request_body = format_body_request(
