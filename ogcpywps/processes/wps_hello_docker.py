@@ -64,7 +64,7 @@ class HelloDocker(Process):
         request_body = format_body_request(
             docker_image=docker_image,
             input_data=input_data,
-            param_as_envar=False,
+            param_as_envar=True,
             queue_name=cloud_params['IaaS_deploy_execute']['QUEUE_NAME'],
             volume_mapping={})
         response = {'request_body': request_body,
